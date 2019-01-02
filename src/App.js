@@ -5,7 +5,7 @@ import momentRandom from "moment-random";
 import Navbar from "./components/Navbar.js";
 import PhotoContainer from "./components/PhotoContainer.js";
 import FavoritesContainer from "./components/FavoritesContainer.js";
-import { API_KEY } from "./keys.js";
+/*import { API_KEY } from "./keys.js";*/
 
 class App extends Component {
   state = {
@@ -16,13 +16,13 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=JaFYIIsTOea6xEI8HwYdLxcsCbiB70ogStdiPirI`)
       .then(response => response.json())
       .then(json => this.setState({ photo: json }));
   }
 
   setPhoto = date => {
-    fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=${API_KEY}`)
+    fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=JaFYIIsTOea6xEI8HwYdLxcsCbiB70ogStdiPirI`)
       .then(response => response.json())
       .then(json => this.setState({ photo: json }));
   };
