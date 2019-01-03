@@ -28,6 +28,7 @@ const Photo = props => (
     <Segment>
       <Image alt={props.photo.title} src={props.photo.hdurl} centered />
     </Segment>
+		<h3 textAlign="center" >Explanation</h3>
     <Segment secondary>{props.photo.explanation}</Segment>
   </React.Fragment>
 );
